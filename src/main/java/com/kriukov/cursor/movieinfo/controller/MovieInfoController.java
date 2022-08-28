@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MovieInfoController {
 
     @GetMapping("/{movieId}")
-    public ResponseEntity<MovieInfo> getMovieInfo(@PathVariable String movieId){
+    public ResponseEntity<MovieInfo> getMovieInfo(@PathVariable int movieId){
         return ResponseEntity.ok(new MovieInfo(movieId, "Test name"));
     }
 }
